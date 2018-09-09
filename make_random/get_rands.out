@@ -1,0 +1,440 @@
+Total mocks (HEALPix pixels): 143
+Total cores to use: 143
+An optimum number of cores is 143 for this configuration.
+Number of galaxies in each random catalog: 8000000
+
+job #
+    0   -------------> to core 0
+    1   -------------> to core 1
+    2   -------------> to core 2
+    3   -------------> to core 3
+    4   -------------> to core 4
+    5   -------------> to core 5
+    6   -------------> to core 6
+    7   -------------> to core 7
+    8   -------------> to core 8
+    9   -------------> to core 9
+    10  -------------> to core 10
+    11  -------------> to core 11
+    12  -------------> to core 12
+    13  -------------> to core 13
+    14  -------------> to core 14
+    15  -------------> to core 15
+    16  -------------> to core 16
+    17  -------------> to core 17
+    18  -------------> to core 18
+    19  -------------> to core 19
+    20  -------------> to core 20
+    21  -------------> to core 21
+    22  -------------> to core 22
+    23  -------------> to core 23
+    24  -------------> to core 24
+    25  -------------> to core 25
+    26  -------------> to core 26
+    27  -------------> to core 27
+    28  -------------> to core 28
+    29  -------------> to core 29
+    30  -------------> to core 30
+    31  -------------> to core 31
+    32  -------------> to core 32
+    33  -------------> to core 33
+    34  -------------> to core 34
+    35  -------------> to core 35
+    36  -------------> to core 36
+    37  -------------> to core 37
+    38  -------------> to core 38
+    39  -------------> to core 39
+    40  -------------> to core 40
+    41  -------------> to core 41
+    42  -------------> to core 42
+    43  -------------> to core 43
+    44  -------------> to core 44
+    45  -------------> to core 45
+    46  -------------> to core 46
+    47  -------------> to core 47
+    48  -------------> to core 48
+    49  -------------> to core 49
+    50  -------------> to core 50
+    51  -------------> to core 51
+    52  -------------> to core 52
+    53  -------------> to core 53
+    54  -------------> to core 54
+    55  -------------> to core 55
+    56  -------------> to core 56
+    57  -------------> to core 57
+    58  -------------> to core 58
+    59  -------------> to core 59
+    60  -------------> to core 60
+    61  -------------> to core 61
+    62  -------------> to core 62
+    63  -------------> to core 63
+    64  -------------> to core 64
+    65  -------------> to core 65
+    66  -------------> to core 66
+    67  -------------> to core 67
+    68  -------------> to core 68
+    69  -------------> to core 69
+    70  -------------> to core 70
+    71  -------------> to core 71
+    72  -------------> to core 72
+    73  -------------> to core 73
+    74  -------------> to core 74
+    75  -------------> to core 75
+    76  -------------> to core 76
+    77  -------------> to core 77
+    78  -------------> to core 78
+    79  -------------> to core 79
+    80  -------------> to core 80
+    81  -------------> to core 81
+    82  -------------> to core 82
+    83  -------------> to core 83
+    84  -------------> to core 84
+    85  -------------> to core 85
+    86  -------------> to core 86
+    87  -------------> to core 87
+    88  -------------> to core 88
+    89  -------------> to core 89
+    90  -------------> to core 90
+    91  -------------> to core 91
+    92  -------------> to core 92
+    93  -------------> to core 93
+    94  -------------> to core 94
+    95  -------------> to core 95
+    96  -------------> to core 96
+    97  -------------> to core 97
+    98  -------------> to core 98
+    99  -------------> to core 99
+    100 -------------> to core 100
+    101 -------------> to core 101
+    102 -------------> to core 102
+    103 -------------> to core 103
+    104 -------------> to core 104
+    105 -------------> to core 105
+    106 -------------> to core 106
+    107 -------------> to core 107
+    108 -------------> to core 108
+    109 -------------> to core 109
+    110 -------------> to core 110
+    111 -------------> to core 111
+    112 -------------> to core 112
+    113 -------------> to core 113
+    114 -------------> to core 114
+    115 -------------> to core 115
+    116 -------------> to core 116
+    117 -------------> to core 117
+    118 -------------> to core 118
+    119 -------------> to core 119
+    120 -------------> to core 120
+    121 -------------> to core 121
+    122 -------------> to core 122
+    123 -------------> to core 123
+    124 -------------> to core 124
+    125 -------------> to core 125
+    126 -------------> to core 126
+    127 -------------> to core 127
+    128 -------------> to core 128
+    129 -------------> to core 129
+    130 -------------> to core 130
+    131 -------------> to core 131
+    132 -------------> to core 132
+    133 -------------> to core 133
+    134 -------------> to core 134
+    135 -------------> to core 135
+    136 -------------> to core 136
+    137 -------------> to core 137
+    138 -------------> to core 138
+    139 -------------> to core 139
+    140 -------------> to core 140
+    141 -------------> to core 141
+    142 -------------> to core 142
+
+Saving random catalogs:
+
+pixel_number: 86 num_points pixel: 8001067 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 102 num_points pixel: 8000187 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 29 num_points pixel: 8000277 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 110 num_points pixel: 7999399 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 105 num_points pixel: 7996275 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 101 num_points pixel: 7999935 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 26 num_points pixel: 7998929 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 89 num_points pixel: 7998298 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 111 num_points pixel: 7997782 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 109 num_points pixel: 7999938 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 116 num_points pixel: 8001823 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 51 num_points pixel: 8000390 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 108 num_points pixel: 8001072 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 52 num_points pixel: 8000391 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 113 num_points pixel: 7999511 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 90 num_points pixel: 7998989 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 94 num_points pixel: 7994971 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 50 num_points pixel: 8000113 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 114 num_points pixel: 7997070 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 91 num_points pixel: 7996751 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 38 num_points pixel: 8002884 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 79 num_points pixel: 7997825 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 115 num_points pixel: 7996839 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 103 num_points pixel: 7996035 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 56 num_points pixel: 8002637 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 41 num_points pixel: 8001523 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 100 num_points pixel: 8000395 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 112 num_points pixel: 7999735 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 106 num_points pixel: 8002427 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 53 num_points pixel: 8002227 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 122 num_points pixel: 7998984 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 92 num_points pixel: 7999169 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 99 num_points pixel: 8000286 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 83 num_points pixel: 8000470 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 35 num_points pixel: 7996506 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 88 num_points pixel: 8002768 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 374 num_points pixel: 7998099 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 120 num_points pixel: 7997967 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 37 num_points pixel: 8000184 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 31 num_points pixel: 7999711 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 107 num_points pixel: 7997615 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 377 num_points pixel: 8000344 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 104 num_points pixel: 7999942 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 57 num_points pixel: 8003433 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 22 num_points pixel: 8000597 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 25 num_points pixel: 7999104 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 70 num_points pixel: 8000461 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 309 num_points pixel: 8000812 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 23 num_points pixel: 8003420 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 380 num_points pixel: 8003691 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 121 num_points pixel: 7997464 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 71 num_points pixel: 8001432 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 45 num_points pixel: 7999517 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 118 num_points pixel: 8001274 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 84 num_points pixel: 7997547 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 21 num_points pixel: 8000881 num_points rectangle: 15500000 pix_area 53.7147932935 rectangle_area: 104.072412006
+pixel_number: 49 num_points pixel: 7997604 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 48 num_points pixel: 7997848 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 442 num_points pixel: 7997450 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 443 num_points pixel: 7999928 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 11 num_points pixel: 7995797 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 378 num_points pixel: 8003438 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 96 num_points pixel: 7997973 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 74 num_points pixel: 8000841 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 369 num_points pixel: 8002885 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 32 num_points pixel: 7997414 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 76 num_points pixel: 7999590 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 75 num_points pixel: 7997722 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 80 num_points pixel: 8000715 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 311 num_points pixel: 8001778 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 350 num_points pixel: 8002000 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 373 num_points pixel: 7999172 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 372 num_points pixel: 8000151 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 379 num_points pixel: 7999234 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 36 num_points pixel: 8001742 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 20 num_points pixel: 7999196 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 54 num_points pixel: 8000492 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 73 num_points pixel: 7998515 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 383 num_points pixel: 7999342 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 429 num_points pixel: 7998877 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 123 num_points pixel: 7997129 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 5 num_points pixel: 8001080 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 44 num_points pixel: 8001522 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 124 num_points pixel: 8001977 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 376 num_points pixel: 7999972 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 19 num_points pixel: 7998081 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 15 num_points pixel: 7999002 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 375 num_points pixel: 7999820 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 370 num_points pixel: 8001218 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 365 num_points pixel: 8000167 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 371 num_points pixel: 8002194 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 431 num_points pixel: 8001013 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 430 num_points pixel: 7999838 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 24 num_points pixel: 7999319 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 308 num_points pixel: 8001328 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 30 num_points pixel: 7996633 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 97 num_points pixel: 7999628 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 55 num_points pixel: 7996718 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 60 num_points pixel: 8003439 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 14 num_points pixel: 8001298 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 72 num_points pixel: 7999133 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 82 num_points pixel: 8002210 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 287 num_points pixel: 7999453 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 66 num_points pixel: 8002728 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 285 num_points pixel: 8001247 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 349 num_points pixel: 8003039 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 69 num_points pixel: 8000059 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 16 num_points pixel: 8000543 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 440 num_points pixel: 7997899 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 382 num_points pixel: 7997465 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 67 num_points pixel: 7999167 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 381 num_points pixel: 7996655 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 367 num_points pixel: 8003504 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 7 num_points pixel: 7999801 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 9 num_points pixel: 8003751 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 286 num_points pixel: 8000344 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 17 num_points pixel: 8000415 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 28 num_points pixel: 7998378 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 27 num_points pixel: 7999596 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 39 num_points pixel: 8004928 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 65 num_points pixel: 7999415 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 81 num_points pixel: 7997663 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 8 num_points pixel: 7998232 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 10 num_points pixel: 8002310 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 351 num_points pixel: 7999034 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 77 num_points pixel: 7998091 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 366 num_points pixel: 7996639 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 98 num_points pixel: 7999840 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 40 num_points pixel: 7998557 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 13 num_points pixel: 7999603 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 2 num_points pixel: 7999214 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 61 num_points pixel: 7998998 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 68 num_points pixel: 7996945 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 33 num_points pixel: 8001761 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 3 num_points pixel: 8002643 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 78 num_points pixel: 8002638 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 34 num_points pixel: 8002178 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 6 num_points pixel: 8000247 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 1 num_points pixel: 7998662 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 12 num_points pixel: 7999627 num_points rectangle: 16000000 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 126 num_points pixel: 8000281 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 4 num_points pixel: 7995961 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+pixel_number: 18 num_points pixel: 7999706 num_points rectangle: 15999999 pix_area 53.7147932935 rectangle_area: 107.429586587
+7998298 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.89.fit
+7996275 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.105.fit
+8000277 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.29.fit
+7997782 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.111.fit
+8001072 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.108.fit
+8001823 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.116.fit
+8000390 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.51.fit
+7996751 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.91.fit
+8000391 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.52.fit
+7997825 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.79.fit
+8000395 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.100.fit
+7999735 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.112.fit
+8002227 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.53.fit
+7996035 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.103.fit
+8002637 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.56.fit
+7996839 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.115.fit
+7997615 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.107.fit
+7997967 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.120.fit
+8001523 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.41.fit
+7999169 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.92.fit
+8000470 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.83.fit
+7997848 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.48.fit
+7999711 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.31.fit
+8000151 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.372.fit
+7999590 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.76.fit
+8000715 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.80.fit
+7999935 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.101.fit
+7998989 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.90.fit
+7994971 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.94.fit
+8001067 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.86.fit
+7999938 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.109.fit
+7996506 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.35.fit
+8000344 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.377.fit
+7999942 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.104.fit
+8002884 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.38.fit
+8002885 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.369.fit
+8000113 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.50.fit
+7998984 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.122.fit
+8003691 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.380.fit
+7999172 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.373.fit
+8000286 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.99.fit
+8003420 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.23.fit
+8002427 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.106.fit
+8001778 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.311.fit
+8003433 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.57.fit
+7998929 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.26.fit
+8001432 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.71.fit
+7997547 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.84.fit
+7997070 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.114.fit
+7999234 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.379.fit
+7997414 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.32.fit
+7999511 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.113.fit
+7999928 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.443.fit
+8002768 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.88.fit
+7997973 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.96.fit
+8002000 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.350.fit
+7997722 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.75.fit
+8003438 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.378.fit
+7998099 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.374.fit
+8000187 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.102.fit
+7997464 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.121.fit
+7999196 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.20.fit
+7999399 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.110.fit
+8001274 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.118.fit
+8000812 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.309.fit
+7997450 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.442.fit
+8000461 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.70.fit
+7995797 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.11.fit
+7999517 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.45.fit
+8000881 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.21.fit
+8000841 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.74.fit
+7997604 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.49.fit
+8000597 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.22.fit
+7999104 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.25.fit
+8000184 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.37.fit
+7999972 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.376.fit
+7996655 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.381.fit
+7999034 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.351.fit
+8001013 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.431.fit
+7998515 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.73.fit
+7999214 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.2.fit
+7999133 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.72.fit
+8000059 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.69.fit
+7999820 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.375.fit
+8001328 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.308.fit
+8003504 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.367.fit
+7996639 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.366.fit
+7998232 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.8.fit
+8001080 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.5.fit
+8000415 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.17.fit
+8001977 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.124.fit
+7997129 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.123.fit
+8000492 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.54.fit
+8002638 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.78.fit
+8001247 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.285.fit
+7996718 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.55.fit
+7996945 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.68.fit
+7999838 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.430.fit
+7998091 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.77.fit
+8000281 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.126.fit
+8003439 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.60.fit
+7997465 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.382.fit
+7999342 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.383.fit
+7997899 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.440.fit
+7998877 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.429.fit
+7998998 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.61.fit
+8000167 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.365.fit
+8002194 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.371.fit
+8003039 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.349.fit
+7999453 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.287.fit
+8001218 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.370.fit
+8000344 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.286.fit
+7999415 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.65.fit
+8002728 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.66.fit
+7997663 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.81.fit
+7999628 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.97.fit
+7999319 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.24.fit
+8001298 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.14.fit
+7999167 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.67.fit
+7999840 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.98.fit
+7999596 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.27.fit
+8004928 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.39.fit
+8002210 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.82.fit
+8001522 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.44.fit
+7999706 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.18.fit
+7998081 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.19.fit
+7999801 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.7.fit
+7999627 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.12.fit
+8002310 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.10.fit
+8001761 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.33.fit
+7998557 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.40.fit
+7999002 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.15.fit
+8000247 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.6.fit
+8003751 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.9.fit
+7995961 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.4.fit
+8000543 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.16.fit
+7998378 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.28.fit
+7996633 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.30.fit
+8002643 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.3.fit
+8002178 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.34.fit
+8001742 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.36.fit
+7999603 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.13.fit
+7998662 random positions stored in /global/cscratch1/sd/erfanxyz/projects/blending/buzzard_v1.6_lsst_y1/rand/rand.1.fit
+
+All done! Elapsed time: 0:00:04
