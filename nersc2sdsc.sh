@@ -39,13 +39,17 @@ body+="\n\nSent by Erfan's automated script on GitHub :)"
 
 echo -e "$body" | mailx -s "$subject" -a "$logfile" "tyson@physics.ucdavis.edu erfan@ucdavis.edu"
 
-# - usage:
+# -------------------------------
+# - usage [screen is optional]:
+# -------------------------------
+# screen -S myscreen (to start)
 # bash <(wget --no-cache -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
+# CTRL + A + D (to deattach)
+# screen -X -S myscreen quit (to kill)
 
-# screen tips
-# screen -X -S myscreen quit
-
+# -------------------------------
 # - used ref:
+# -------------------------------
 # https://unix.stackexchange.com/questions/48298/can-rsync-resume-after-being-interrupted
 # https://stackoverflow.com/questions/8260858/how-to-send-email-from-terminal
 
