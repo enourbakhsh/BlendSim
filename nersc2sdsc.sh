@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -n "$STY" ]; then
+    echo "Please press CTRL+A+D to detach from this screen session while leaving it open in background."
+fi
+
 start_time="$(date -u +%s)"
 
 # --------------------------
@@ -30,7 +34,7 @@ secs="$(($end_time-$start_time))"
 # - email settings
 # ------------------
 
-subject="[pid=$$-$RANDOM] File transfer completed successfully"
+subject="[$$-$RANDOM] File transfer completed successfully"
 
 body=''
 body+="Hi Tony and Erfan,\n\n"
