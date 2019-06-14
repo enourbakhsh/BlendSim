@@ -35,7 +35,7 @@ subject="[pid=$$-$RANDOM] File transfer completed successfully"
 body=''
 body+="Hi Tony and Erfan,\n\n"
 body+=$(printf "Congratulations! Your file transfer from NERSC to SDSC has completed successfully in %02d:%02d:%02d hms. " $(($secs/3600)) $(($secs%3600/60)) $(($secs%60)))
-body+="Please have a look at the attached log."
+body+="Please have a look at the attached file $logfile."
 body+="\n\nSent by Erfan's automated script on GitHub :)"
 
 echo -e "$body" | mailx -s "$subject" -a "$logfile" "tyson@physics.ucdavis.edu erfan@ucdavis.edu"
