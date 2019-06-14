@@ -20,7 +20,7 @@ while [ 1 ]
 do
     rsync -avz --partial --exclude-from "$excludelist" "$source" "$dest" --log-file="$logfile" # -p will re-transfer the files from where it was left off
     if [ "$?" = "0" ] ; then
-        echo "rsync completed successfully!"
+        echo "Rsync completed successfully!"
         break
     else
         echo "Rsync failure. Backing off and retrying in $delay minutes ..."
