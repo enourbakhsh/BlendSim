@@ -42,6 +42,9 @@ echo -e "$body" | mailx -s "$subject" -a "$logfile" "tyson@physics.ucdavis.edu e
 # - usage:
 # bash <(wget --no-cache -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
 
+# screen tips
+# screen -X -S myscreen quit
+
 # - used ref:
 # https://unix.stackexchange.com/questions/48298/can-rsync-resume-after-being-interrupted
 # https://stackoverflow.com/questions/8260858/how-to-send-email-from-terminal
