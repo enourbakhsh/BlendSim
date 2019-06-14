@@ -11,13 +11,14 @@ start_time="$(date -u +%s)"
 # --------------------------
 
 logfile="rsync-log.txt" # will be attached to the email
+excludelist=/oasis/projects/nsf/ddp340/erfan/exclude-list.txt
 delay=3 # minutes of delay between the attempts
 source=tyson1@cori.nersc.gov:/global/cscratch1/sd/tyson1/projects/blending/buzzard_v1.9.2_lsst/zsnb/zsnb.*.fit
 dest=/oasis/projects/nsf/ddp340/tyson1/buzzard_v1.9.2_lsst_r3/
 
 while [ 1 ]
 do
-    rsync -avz --partial "$source" "$dest" --log-file="$logfile" # -p will re-transfer the files from where it was left off
+    rsync -avz --partial --exclude-from "$excludelist" "$source" "$dest" --log-file="$logfile" # -p will re-transfer the files from where it was left off
     if [ "$?" = "0" ] ; then
         echo "rsync completed successfully!"
         break
