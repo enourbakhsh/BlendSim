@@ -1,6 +1,6 @@
 #!/bin/bash
 
-script screen.txt
+# script screen.txt
 start_time="$(date -u +%s)"
 
 # --------------------------
@@ -22,7 +22,7 @@ do
     fi
 done
 
-exit # exits the screen session and saves the logs to `screen.log`
+#exit # exits the screen session and saves the logs to `screen.log`
 
 end_time="$(date -u +%s)"
 secs="$(($end_time-$start_time))"
@@ -46,8 +46,8 @@ echo -e "$body" | mailx -s "$subject" -a screen.txt "erfan@ucdavis.edu"
 # echo 'mail content' | mailx -s 'email subject' -a attachment.txt username@stackoverflow.com
 
 # usage:
-# bash <(curl -s https://github.com/cosmicshear/BlendSim/blob/master/nersc2sdsc.sh)
-# curl -sSL https://github.com/cosmicshear/BlendSim/blob/master/nersc2sdsc.sh | sh
-# bash <(wget -qO- https://github.com/cosmicshear/BlendSim/blob/master/nersc2sdsc.sh)
+# bash <(curl -s https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
+# curl -sSL https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh | sh
+# bash <(wget -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
 
 
