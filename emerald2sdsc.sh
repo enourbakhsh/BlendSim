@@ -38,12 +38,10 @@ body+="\n\nSent by Erfan's automated script on GitHub :)"
 
 echo -e "$body" | mailx -s "$subject" -a "$logfile" "erfan@ucdavis.edu"
 
-# used ref:
+# - usage:
+# bash <(wget --no-cache -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
+
+# - used ref:
 # https://unix.stackexchange.com/questions/48298/can-rsync-resume-after-being-interrupted
 # https://stackoverflow.com/questions/8260858/how-to-send-email-from-terminal
-# echo 'mail content' | mailx -s 'email subject' -a attachment.txt username@stackoverflow.com
-
-# usage:
-# bash <(wget --delete-after -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
-
 
