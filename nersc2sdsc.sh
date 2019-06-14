@@ -6,7 +6,7 @@ start_time="$(date -u +%s)"
 # - file transfer settings
 # --------------------------
 
-logfile="screen.txt" # will be attached to the email
+logfile="rsync-log.txt" # will be attached to the email
 delay=3 # minutes of delay between the attempts
 source=tyson1@cori.nersc.gov:/global/cscratch1/sd/tyson1/projects/blending/buzzard_v1.9.2_lsst/zsnb/zsnb.*.fit
 dest=/oasis/projects/nsf/ddp340/tyson1/buzzard_v1.9.2_lsst_r3/
