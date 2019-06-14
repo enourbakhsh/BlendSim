@@ -50,7 +50,7 @@ echo -e "$body" | mailx -s "$subject" -a "$logfile" "tyson@physics.ucdavis.edu e
 # -------------------------------
 # screen -S myscreen (to start)
 # bash <(wget --no-cache -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
-# CTRL + A + D (to deattach)
+# CTRL + A + D (to detach)
 # screen -X -S myscreen quit (to kill)
 
 # -------------------------------
