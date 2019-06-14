@@ -47,3 +47,7 @@ echo -e "$body" | mailx -s "$subject" -a screen.txt "erfan@ucdavis.edu"
 
 # usage:
 # bash <(curl -s https://github.com/cosmicshear/BlendSim/blob/master/nersc2sdsc.sh)
+# curl -sSL https://github.com/cosmicshear/BlendSim/blob/master/nersc2sdsc.sh | sh
+# bash <(wget -qO- https://github.com/cosmicshear/BlendSim/blob/master/nersc2sdsc.sh)
+
+
