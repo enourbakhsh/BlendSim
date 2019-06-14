@@ -12,7 +12,7 @@ dest=/oasis/projects/nsf/ddp340/erfan/rsync_test/
 
 while [ 1 ]
 do
-    rsync -avz --partial $source $dest --log-file=$logfile
+    rsync -avz --partial $source $dest --log-file="$logfile"
     if [ "$?" = "0" ] ; then
         echo "rsync completed successfully!"
         break
