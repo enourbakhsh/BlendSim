@@ -805,7 +805,7 @@ if rank<njob:
 		if verbose==3: print(f'rank {rank}, cell {cell}: number of galaxies: {len(ra)}')
 		if log_memory: memory.log('B10', get_linenumber())
 
-		del data, gamma1_copy
+		del data, galhlr_lensed_only_copy
 
 		# theta_eff = theta_eff_zenith.copy()
 		# for _key in theta_eff.keys():
@@ -1017,6 +1017,3 @@ os.system("echo -e 'attached are out and err files (inetrnally from the python c
 
 # if __name__== "__main__":
 # 	get_cells() # realization: 0, 1, 2 ,3 ,4, 5
-
-
-
