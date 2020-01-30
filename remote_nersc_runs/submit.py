@@ -81,14 +81,14 @@ printf 'SLURM runtime: %02dh:%02dm:%02ds\\n' $(($secs/3600)) $(($secs%3600/60)) 
 # - email settings
 # ------------------
 
-body = "Hi Erfan,\n\nPlease take a look at the attached error and output files.\n\nSent by Erfan's automated script :)"
+# body = "Hi Erfan,\n\nPlease take a look at the attached error and output files.\n\nSent by Erfan's automated script :)"
 
 bash_lines = f"""
 JID=$(sbatch {bashfname})
 echo $JID
 sleep 20s # needed
 ST="PENDING"
-while [ "$ST" != "COMPLETED" ] ; do 
+while [ "$ST" != "COMPLETED" ] ; do
    ST=$(sacct -j ${{JID##* }} -o State | awk 'FNR == 3 {{print $1}}')
    sleep 3m
    if [ "$ST" == "FAILED" ]; then
@@ -96,7 +96,7 @@ while [ "$ST" != "COMPLETED" ] ; do
       exit 122
    fi
 echo $ST
-echo -e {body} | mailx -s "Batch job $JID $ST" -a {outfname} -a {errfname} "tyson@physics.ucdavis.edu erfan@ucdavis.edu"
+echo -e "$ST" | mailx -s "$JID" -a {outfname} -a {errfname} "erfan@ucdavis.edu"
 """
 
 os.system(bash_lines)
