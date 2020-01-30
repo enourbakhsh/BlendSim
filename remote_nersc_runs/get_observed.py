@@ -953,7 +953,7 @@ if rank<njob:
 		_values = [galaxy_id, mag_u_lsst_lensed_only,mag_g_lsst_lensed_only,mag_r_lsst_lensed_only,
 		 mag_i_lsst_lensed_only, mag_z_lsst_lensed_only,mag_y_lsst_lensed_only,
 		 u,g,r,i,z,y, eu,eg,er,ei,ez,ey, 
-		 redshift_true,zs, ra, dec, galhlr, galhlr_lensed_convolved, gamma1, gamma2, kappa,
+		 redshift_true,zs, ra, dec, galhlr_lensed_convolved, galhlr_lensed_convolved, gamma1, gamma2, kappa,
 		 e1, e2, de, de1, de2, e1_lensed_convolved, e2_lensed_convolved, nNaN, red, bad_e]
 
 		type_dict = {'id':np.bytes88,'u_lensed_only':np.float32,'g_lensed_only':np.float32,'r_lensed_only':np.float32,'i_lensed_only':np.float32,'z_lensed_only':np.float32,'y_lensed_only':np.float32,
@@ -967,8 +967,9 @@ if rank<njob:
 		del galaxy_id, mag_u_lsst_lensed_only,mag_g_lsst_lensed_only,mag_r_lsst_lensed_only, \
 		    mag_i_lsst_lensed_only, mag_z_lsst_lensed_only,mag_y_lsst_lensed_only, \
 		    u,g,r,i,z,y, eu,eg,er,ei,ez,ey, \
-		    redshift_true,zs, ra, dec, galhlr, galhlr_lensed_convolved, gamma1, gamma2, kappa, \
+		    redshift_true,zs, ra, dec, galhlr_lensed_convolved, gamma1, gamma2, kappa, \
 		    e1, e2, de, de1, de2, e1_lensed_convolved, e2_lensed_convolved, nNaN, red, bad_e
+		# del galhlr
 		
 		# ugriz, e1,e2, galhlr with their errors --> are all observed: lensed+convolved+noisy
 		# dt = np.dtype('u1'); dt.name # 'uint8' # a11 --> bytes88
