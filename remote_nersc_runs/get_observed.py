@@ -786,7 +786,7 @@ if rank<njob:
 
 		if log_memory: memory.log('B9', get_linenumber())
 
-		galaxy_id = data['galaxy_id']
+		galaxy_id = np.int64(data['galaxy_id']).astype('U11')
 		redshift_true = data['redshift_true']
 		zs = data['redshift']
 		ra = data['ra']
@@ -956,7 +956,7 @@ if rank<njob:
 		 redshift_true,zs, ra, dec, galhlr_lensed_convolved, galhlr_lensed_convolved, gamma1, gamma2, kappa,
 		 e1, e2, de, de1, de2, e1_lensed_convolved, e2_lensed_convolved, nNaN, red, bad_e]
 
-		type_dict = {'id':np.bytes88,'u_lensed_only':np.float32,'g_lensed_only':np.float32,'r_lensed_only':np.float32,'i_lensed_only':np.float32,'z_lensed_only':np.float32,'y_lensed_only':np.float32,
+		type_dict = {'id':'U11','u_lensed_only':np.float32,'g_lensed_only':np.float32,'r_lensed_only':np.float32,'i_lensed_only':np.float32,'z_lensed_only':np.float32,'y_lensed_only':np.float32,
 		 'u':np.float32,'g':np.float32,'r':np.float32,'i':np.float32,'z':np.float32,'y':np.float32,
 		 'eu':np.float32,'eg':np.float32,'er':np.float32,'ei':np.float32,'ez':np.float32,'ey':np.float32,
 		 'redshift_true':np.float32,'zs':np.float32,'ra':np.float64,'dec':np.float64,'galhlr':np.float32,'galhlr_lensed_convolved':np.float32,'gamma1':np.float32,'gamma2':np.float32,'kappa':np.float32,'e1':np.float32,'e2':np.float32,
@@ -975,7 +975,8 @@ if rank<njob:
 		# dt = np.dtype('u1'); dt.name # 'uint8' # a11 --> bytes88
 
 		if save_format=='fit':
-			util.gen_write(output_fname,_keys,_values,dtypes=['a11']+(len(_keys)-3)*['f4']+3*['u1']) # u1: 0 to 255 (unsigned integer)
+			util.gen_write(output_fname,_keys,_values,dtypes=list(type_dict.values())) # u1: 0 to 255 (unsigned integer)
+			# util.gen_write(output_fname,_keys,_values,dtypes=['U11']+(len(_keys)-3)*['f4']+3*['u1']) # u1: 0 to 255 (unsigned integer)
 		else:
 			df_dict = dict(zip(_keys, _values))
 			df = pd.DataFrame.from_dict(df_dict).astype(type_dict)
