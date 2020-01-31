@@ -158,7 +158,7 @@ def mask_of_mask(mask,submask):
 # https://www.kaggle.com/arjanso/reducing-dataframe-memory-size-by-65
 # https://www.kaggle.com/gemartin/load-data-reduce-memory-usage
 # https://www.mikulskibartosz.name/how-to-reduce-memory-usage-in-pandas/
-def reduce_mem_usage(df, verbose=True):
+def reduce_df_mem_usage(df, verbose=True):
 	start_mem = df.memory_usage().sum() / 1024**2
 	for col in df.columns:
 	    col_type = df[col].dtype
@@ -953,13 +953,13 @@ if rank<njob:
 		_values = [galaxy_id, mag_u_lsst_lensed_only,mag_g_lsst_lensed_only,mag_r_lsst_lensed_only,
 		 mag_i_lsst_lensed_only, mag_z_lsst_lensed_only,mag_y_lsst_lensed_only,
 		 u,g,r,i,z,y, eu,eg,er,ei,ez,ey, 
-		 redshift_true,zs, ra, dec, galhlr_lensed_convolved, galhlr_lensed_convolved, gamma1, gamma2, kappa,
+		 redshift_true,zs, ra, dec, galhlr_lensed_convolved, gamma1, gamma2, kappa,
 		 e1, e2, de, de1, de2, e1_lensed_convolved, e2_lensed_convolved, nNaN, red, bad_e]
 
 		type_dict = {'id':'U11','u_lensed_only':np.float32,'g_lensed_only':np.float32,'r_lensed_only':np.float32,'i_lensed_only':np.float32,'z_lensed_only':np.float32,'y_lensed_only':np.float32,
 		 'u':np.float32,'g':np.float32,'r':np.float32,'i':np.float32,'z':np.float32,'y':np.float32,
 		 'eu':np.float32,'eg':np.float32,'er':np.float32,'ei':np.float32,'ez':np.float32,'ey':np.float32,
-		 'redshift_true':np.float32,'zs':np.float32,'ra':np.float64,'dec':np.float64,'galhlr':np.float32,'galhlr_lensed_convolved':np.float32,'gamma1':np.float32,'gamma2':np.float32,'kappa':np.float32,'e1':np.float32,'e2':np.float32,
+		 'redshift_true':np.float32,'zs':np.float32,'ra':np.float64,'dec':np.float64,'galhlr_lensed_convolved':np.float32,'gamma1':np.float32,'gamma2':np.float32,'kappa':np.float32,'e1':np.float32,'e2':np.float32,
 		 'delta_e':np.float32,'delta_e1':np.float32,'delta_e2':np.float32,'e1_lensed_convolved':np.float32,'e2_lensed_convolved':np.float32,'nNaN':np.uint8,'isred':np.uint8,'bad_shape':np.uint8}
 
 		*_keys, = type_dict
@@ -981,8 +981,12 @@ if rank<njob:
 			df_dict = dict(zip(_keys, _values))
 			df = pd.DataFrame.from_dict(df_dict).astype(type_dict)
 			del df_dict
-			if reduce_mem_usage: df = reduce_mem_usage(df)
+			if reduce_mem_usage: df = reduce_df_mem_usage(df)
 			getattr(df, f'to_{save_format}')(output_fname)
+			if rank==0 and verbose:
+				df_mem = df.memory_usage().sum() / 1024**2
+				print(f'The typical size of the dataframes: {df_mem :5.2f} Mb')
+				print(f'As an example, the dataframe for rank {rank} is stored in {output_fname}')
 			del df
 
 		if verbose==3: print(f"Core {rank} is done writing the output catalog ({save_format} format) in {datetime.timedelta(seconds=round(time.process_time()-t0))}")
@@ -1013,7 +1017,7 @@ time.sleep(2)
 
 #END: This need to print after all MPI_Send/MPI_Recv has been completed
 if rank==0: print( f"\nSuccess! All done! Elapsed time: {datetime.timedelta(seconds=round(time.process_time()-t0))}" ) # time is underestimated?
-os.system("echo -e 'attached are out and err files (inetrnally from the python code)' | mailx -s 'Batch job COMPLETED' -a get_observed_0_0_r3.out -a get_observed_0_0_r3.err 'erfan@ucdavis.edu'")
+# os.system("echo -e 'attached are out and err files (inetrnally from the python code)' | mailx -s 'Batch job COMPLETED' -a get_observed_0_0_r3.out -a get_observed_0_0_r3.err 'erfan@ucdavis.edu'")
 
 
 
