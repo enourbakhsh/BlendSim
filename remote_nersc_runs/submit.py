@@ -64,18 +64,20 @@ export OMP_NUM_THREADS=$omp_threads
 export OMP_PLACES=threads\n
 """)
 	f.writelines(f"srun --unbuffered --cpu_bind=cores python {pyfname}")
-	f.writelines("""\n
+	f.writelines(f"""\n
 #sacct -j $SLURM_JOB_ID --format JobID,Partition,Submit,Start,End,NodeList%40,ReqMem,MaxRSS,MaxRSSNode,MaxRSSTask,MaxVMSize,ExitCode\n
 date
 end_time="$(date -u +%s)"
 secs="$(($end_time-$start_time))"
-printf 'SLURM runtime: %02dh:%02dm:%02ds\\n' $(($secs/3600)) $(($secs%3600/60)) $(($secs%60))
+printf 'SLURM runtime: %02dh:%02dm:%02ds\\n' $(($secs/3600)) $(($secs%3600/60)) $(($secs%60))\n
+echo -e "Hi Erfan, take a look at the attached error and output files." | mailx -s "Batch job $JID $ST" -a {outfname} -a {errfname} {email}
 """)
+
 
 # submit the job using python
 # os.system("module load python")
 # os.system(f"source activate {conda_env}")
-# os.system(f"sbatch {bashfname}")
+os.system(f"sbatch {bashfname}")
 
 # ------------------
 # - email settings
@@ -83,23 +85,23 @@ printf 'SLURM runtime: %02dh:%02dm:%02ds\\n' $(($secs/3600)) $(($secs%3600/60)) 
 
 # body = "Hi Erfan,\n\nPlease take a look at the attached error and output files.\n\nSent by Erfan's automated script :)"
 
-bash_lines = f"""
-JID=$(sbatch {bashfname})
-echo $JID
-sleep 20s # needed
-ST="PENDING"
-while [ "$ST" != "COMPLETED" ] ; do
-   ST=$(sacct -j ${{JID##* }} -o State | awk 'FNR == 3 {{print $1}}')
-   sleep 3m
-   if [ "$ST" == "FAILED" ]; then
-      echo 'Job final status:' $ST, exiting...
-      exit 122
-   fi
-echo $ST
-echo -e "$ST" | mailx -s "$JID" -a {outfname} -a {errfname} "erfan@ucdavis.edu"
-"""
+# bash_lines = f"""
+# JID=$(sbatch {bashfname})
+# echo $JID
+# sleep 20s # needed
+# ST="PENDING"
+# while [ "$ST" != "COMPLETED" ] ; do 
+#    ST=$(sacct -j ${{JID##* }} -o State | awk 'FNR == 3 {{print $1}}')
+#    sleep 3m
+#    if [ "$ST" == "FAILED" ]; then
+#       echo 'Job final status:' $ST, exiting...
+#       exit 122
+#    fi
+# echo $ST
+# echo -e {body} | mailx -s "Batch job $JID $ST" -a {outfname} -a {errfname} "tyson@physics.ucdavis.edu erfan@ucdavis.edu"
+# """
 
-os.system(bash_lines)
+# os.system(bash_lines)
 
 # echo -e "attached are out and err files" | mailx -s "Batch job COMPLETED" -a "get_observed_0_0_r3.out" -a "get_observed_0_0_r3.err" "tyson@physics.ucdavis.edu erfan@ucdavis.edu"
 
