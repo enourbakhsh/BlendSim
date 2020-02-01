@@ -11,7 +11,7 @@ realization         : 3
 catalog             : '{catname}_v{catversion}_{realization}'
 zregime             : zs
 celli               : 0 # None for no bounds # zero-indexed
-cellf               : 0 #142 # None for no bounds # inclusive
+cellf               : 142 #0 #142 # None for no bounds # inclusive
 nest                : yes
 nside               : 8 # for healpix
 magcut_i_lsst       : 26.0 #24.0 # I went 2 mags fainter because Blendsim might displace some very faint galaxies and combined with other galaxies (collectively) they can have imag < final_cut or so
@@ -34,7 +34,7 @@ galfwhmlim          : [0.0, 240.0] # FWHM arcsec (exclusive interval)
 save_format         : 'pickle' # feather # fit (slower?) # pickle # parquet # hdf # sql # csv (slow?)
 package_dir         : /global/project/projectdirs/m1727/erfanxyz_home/myprojects/packages # /global/homes/e/erfanxyz'
 scratch_dir         : /global/cscratch1/sd/tyson1
-output_dir          : '{scratch_dir}/projects/blending/{catname}_v{catversion}_{survey}/{zregime}nb'
+output_dir          : '{scratch_dir}/projects/blending/{catname}_v{catversion}_{survey}/{zregime}nb/r{realization}'
 output_fname        : '{output_dir}/{zregime}nb.{{cell}}_r{realization}.{save_format}'
 load_one_chunk      : no # just load the first "chunk" of each healpix pixel for testing purposes (usually ~8K rows for Buzzard but sometimes 1 and also 11M! so not recommended)
 nrows               : 0 #10000 # analyze only the first `nrows` rows for testing purposes | 0 for all rows | must set this to 0 if load_first_chunk is True
@@ -84,7 +84,7 @@ constraint            : haswell # or no | NERSC Cori haswell
 cores_per_node        : 32 # NERSC Cori 32
 hyperthreads_per_node : 2  # NERSC Cori 2 meaning twice the cores can be assumed in multithreading
 tasks                 : $cellf-celli+1$                # how many tasks in total
-tasks_per_node        : 4                              # (max) number of tasks per node
+tasks_per_node        : 10 #4                          # (max) number of tasks per node
 nodes                 : $-(-tasks//tasks_per_node)$    # number of nodes used
 multithreading        : off                            # activate multithreading
 hyperthreading        : off                            # activate hyperthreading
