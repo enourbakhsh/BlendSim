@@ -70,7 +70,7 @@ date
 end_time="$(date -u +%s)"
 secs="$(($end_time-$start_time))"
 printf 'SLURM runtime: %02dh:%02dm:%02ds\\n' $(($secs/3600)) $(($secs%3600/60)) $(($secs%60))\n
-echo -e "Hi Erfan, take a look at the attached error and output files." | mailx -s "Batch job $JID $ST" -a {outfname} -a {errfname} {email}
+echo -e "Hi Erfan, take a look at the attached error and output files." | mailx -s "Batch job $SLURM_JOB_ID is concluded" -a {outfname} -a {errfname} {email}
 """)
 
 
