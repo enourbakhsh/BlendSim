@@ -587,7 +587,7 @@ if rank<njob:
 
 		bad_FWHM_gal_idx = (FWHM_gal<=galfwhmlim[0])|(FWHM_gal>=galfwhmlim[1])  #|(FWHM_gal<=0) nope, if there is any not-finite it says <= is invalid
 		bad_fwhmg = sum(bad_FWHM_gal_idx)
-		if bad_fwhmg>0: print(f'Warning in rank {rank}, cell {cell}: {bad_fwhmg} galaxies have abnormal FWHM i.e. not in ({galfwhmlim[0]},{galfwhmlim[1]}) arcsec, they will be filtered and therefore treated as NaN mags in all bands...')
+		if bad_fwhmg>0: print(f'Warning in rank {rank}, cell {cell}: {bad_fwhmg} galaxies have abnormal FWHM i.e. not in ({galfwhmlim[0]},{galfwhmlim[1]}) arcsec, they will be thrown out of the sample...')
 		FWHM_gal[bad_FWHM_gal_idx] = FWHM_gal_median # will get rid of them anyway
 
 
