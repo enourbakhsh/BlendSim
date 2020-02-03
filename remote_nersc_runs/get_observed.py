@@ -912,7 +912,7 @@ if rank<njob:
 		del eps_true, eps_lensed_convolved
 		#gc.collect()
 
-		red = red.astype(int) # {1: red, 0: blue}
+		red = red.astype(np.int8) # {1: red, 0: blue}
 		#bad_e = bad_e.astype(int)
 		bad_e = bad_e + _mask_g*2 + _mask_e*10 # {0: useful shape, 1: useless shape with e>1, 2: e<1 but sheared with g>1 not WL, 3: 1 & 2 happened at the same time, 10: sheared-only e is still illegal after all the corrections, >10: 10 combined with 1 and/or 2}
 
