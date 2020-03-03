@@ -141,6 +141,7 @@ def get_linenumber():
 
 def shearMasked(): # when g>1 # added by Erfan :: eq 3.2 in http://articles.adsabs.harvard.edu/cgi-bin/nph-iarticle_query?1997A%26A...318..687S&amp;data_type=PDF_HIGH&amp;whole_paper=YES&amp;type=PRINTER&amp;filetype=.pdf
 	return ( 1-g_complex[_mask_g]*np.conj(eps_true[_mask_g]) )/( np.conj(eps_true[_mask_g])-np.conj(g_complex[_mask_g]) ) # ! this is not WL limit since g>1 ! it happens very very rarely like 1 per 52 sq. deg. cell, it gave e.g. e=1.08 after shearing in one case; had to fix it bc addNoise chokes with e>=1
+	# Any sign convention in teh above ??? cf. eps_sheared = (eps + g)/(1 + eps*conj(g)) in https://github.com/pmelchior/epsnoise/blob/9e556ed5019a01010149fda0a0e9ba0a6226fa84/epsnoise.py#L124
 
 def mask_of_mask(mask,submask):
 	if sum(mask) != len(submask):
@@ -715,7 +716,7 @@ if rank<njob:
 		if log_memory: memory.log('B6', get_linenumber())
 
 		if maxNaN<6:
-			# galaxies with maximum maxNaN bands with 99 values are accepted
+			# galaxies with maximum `maxNaN` bands with flagged (i.e. 99) or healed values are accepted
 			# limiting magnitude on i is also applied before # no galaxy with i=99.0 will survive
 			accepted = (nNaN <= maxNaN) & (~negative_mu_idx) & (~notfinite_FWHM_gal_idx) & (~bad_FWHM_gal_idx) # `i < ...` is False for not finite i values not the other bands
 		else:
@@ -872,7 +873,7 @@ if rank<njob:
 		if sum(_mask_e)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(_mask_e)} bad eps_lensed_convolved \n |e|[{np.where(_mask_e)[0]}] = {np.abs(eps_lensed_convolved)[_mask_e]} \n will take care of it...')
 		eps_lensed_convolved[_mask_e] = 0 + 1j * 0 # just a place-holder not to choke epsnoise
 
-		eps_noisy = epsnoise.addNoise(eps_lensed_convolved, nu, transform_eps=transform_eps) # I fixed this function in epsnoise to get rid of an excess number of galaxies around e~1 but Peter said you better remove them
+		eps_noisy = epsnoise.addNoise(eps_lensed_convolved, nu, transform_eps=transform_eps) #, rseed=cell+1958) # rseed just for completeness # since we pass the data as a whole to epsnoise, the initial seed at the top of epsnoise is enough to generate reproducible results # I fixed this function in epsnoise to get rid of an excess number of galaxies around e~1 but Peter said you better remove them
 
 		# replace problematic shapes with (sheared+convolved)-only shapes without noise provided by buzzard to be flagged as a bad shapes later
 		eps_noisy[_mask_e] = eps_lensed_convolved[_mask_e]
