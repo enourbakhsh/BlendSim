@@ -472,7 +472,7 @@ if rank<njob:
 			# achieved_snr = depth2nyear(m5,return_delta_snr=True)+depth['nsigma']
 			achieved_snr     = nyear2snr(nYrObs,at_mag=depth['mag'],refBand=refBand,FWHM_gal_median=0) #depth2nyear(m5,return_delta_snr=True)+depth['nsigma']
 			achieved_snr_ext = nyear2snr(nYrObs,at_mag=depth['mag'],refBand=refBand,FWHM_gal_median=FWHM_gal_median)
-			print(f"Set nYrObs to {nYrObs:.4f} to satisfy:\n{refBand} m5 ~ {m5:.2f} for point sources \t\t\t --> \t {refBand} m5 ~ {m5_ext:.2f} for median sized (FWHM={FWHM_gal_median}) extended sources.\nS/N ~ {achieved_snr:.2f} at {refBand} of {depth['mag']} for point sources \t --> \t S/N ~ {achieved_snr_ext:.2f} at {refBand} of {depth['mag']} for median sized (FWHM={FWHM_gal_median}) extended sources.\n")
+			print(f"Set nYrObs to {nYrObs:.4f} to satisfy:\n{refBand} m5 ~ {m5:.4f} for point sources \t\t\t --> \t {refBand} m5 ~ {m5_ext:.4f} for median sized (FWHM={FWHM_gal_median}) extended sources.\nS/N ~ {achieved_snr:.4f} at {refBand} of {depth['mag']} for point sources \t --> \t S/N ~ {achieved_snr_ext:.4f} at {refBand} of {depth['mag']} for median sized (FWHM={FWHM_gal_median}) extended sources.\n")
 
 	errmodel.nYrObs = nYrObs # do not forget!
 
