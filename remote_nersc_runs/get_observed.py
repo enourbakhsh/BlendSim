@@ -906,7 +906,7 @@ if rank<njob:
 		de = np.abs( eps_lensed_convolved - eps_noisy ) #np.abs( np.abs(eps_lensed_only) - np.abs(eps_noisy) )
 		bad_e = np.abs(eps_noisy) > maxe
 		if sum(bad_e):
-			print(f'Warning in rank {rank}, cell {cell}: {100.*sum(bad_e)/len(eps_noisy):.2f} percent of shapes have e > ~1, i.e. useless!')
+			print(f'Warning in rank {rank}, cell {cell}: {100.*sum(bad_e)/len(eps_noisy):.2f} percent of shapes have e > {maxe}, i.e. useless!')
 
 		#shape_weight = 1. / (shape_noise**2 + de**2)
 
