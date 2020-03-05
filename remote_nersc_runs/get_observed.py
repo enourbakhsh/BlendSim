@@ -53,7 +53,7 @@ else:
 	size = 1
 	rank = 0
 
-paths = [f'{package_dir}/gcr-catalogs-buzzard-1.9',
+paths = [f'{package_dir}/gcr-catalogs-buzzard-2.0',
          f'{package_dir}/util',
          f'{package_dir}/PhotoZDC1/src',
          f'{package_dir}/footprinter',
