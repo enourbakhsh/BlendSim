@@ -6,7 +6,7 @@ parallel            : on
 verbose             : 3 # 0: silent except for final status and warnings | 1: minimal progress info | 2: all steps (only with one core as a representative) | 3: all steps (from all cores) -- option 2 does not work yet (TODO)
 catname             : buzzard
 survey              : lsst
-catversion          : 1.9.2
+catversion          : 2.0.0
 realization         : 3
 catalog             : '{catname}_v{catversion}_{realization}'
 zregime             : zs
@@ -55,7 +55,7 @@ tvis             : 30.0 # 2x15 sec exposures (same for all bands)
 airMass          : 1.2
 sigmaSys         : 0.005
 extendedSource   : on # assumes extended sources - generates appropriate theta_eff for galaxies
-HLR_gal_median   : 0.28 # not convolved! # [needed if extendedSource is on] median of galaxy half light radii in arcsec - normally for refBand but 1.9.2 resamples from HST F125
+HLR_gal_median   : 0.27 # not convolved! # [needed if extendedSource is on] median of galaxy half light radii in arcsec - normally for refBand but buzz_ver>=1.9.2 resamples from HST F125
 RandomSeed       : 1915
 nVisYr           : {'LSST_u':5.6,   'LSST_g':8.0,   'LSST_r':18.4,  'LSST_i':18.4,  'LSST_z':16.0,  'LSST_y':16.0}
 msky             : {'LSST_u':22.99, 'LSST_g':22.26, 'LSST_r':21.20, 'LSST_i':20.48, 'LSST_z':19.60, 'LSST_y':18.61} # sky brightness (mag/arcsec^2)
