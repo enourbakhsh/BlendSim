@@ -1,6 +1,6 @@
 cd /global/project/projectdirs/m1727/erfanxyz_home/myprojects/packages
 mkdir gcr-catalogs-buzzard-2
-02:okdel erfan$ git clone https://github.com/LSSTDESC/gcr-catalogs.git .
+git clone https://github.com/LSSTDESC/gcr-catalogs.git .
 
 cd ~/erfan_projects/get_observed
 module load python
