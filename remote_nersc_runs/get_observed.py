@@ -20,6 +20,7 @@ import gc # garbage collector
 import resource
 from GCR import GCRQuery
 import pandas as pd
+import GCRCatalogs
 
 # https://stackoverflow.com/questions/53037758/leverage-python-f-strings-with-yaml-files
 # works with yaml.safe_load
@@ -53,8 +54,7 @@ else:
 	size = 1
 	rank = 0
 
-paths = [f'{package_dir}/gcr-catalogs-buzzard-2',
-         f'{package_dir}/util',
+paths = [f'{package_dir}/util',
          f'{package_dir}/PhotoZDC1/src',
          f'{package_dir}/footprinter',
          f'{package_dir}/epsnoise']
@@ -62,7 +62,6 @@ paths = [f'{package_dir}/gcr-catalogs-buzzard-2',
 for path in paths:
 	sys.path.insert(0, path)
 
-import GCRCatalogs
 import util
 import photErrorModel as ephot
 import footprinter as fp
