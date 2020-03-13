@@ -10,7 +10,7 @@ start_time="$(date -u +%s)"
 # - file transfer settings
 # --------------------------
 
-logfile="rsync-log.txt" # will be attached to the email
+logfile="rsync-log-2020.txt" # will be attached to the email
 delay=3 # minutes of delay between the attempts
 source=tyson1@cori.nersc.gov:/global/cscratch1/sd/tyson1/projects/blending/buzzard_v2.0.0_lsst/zsnb/r3/zsnb.*.pickle
 dest=/oasis/projects/nsf/ddp340/tyson1/buzzard_v2.0.0_lsst_r3/
