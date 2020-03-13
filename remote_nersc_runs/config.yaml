@@ -92,7 +92,7 @@ cpus_per_task         : >-                             # number of cores per MPI
                         $1 + multithreading *
                         (((1+hyperthreading*(hyperthreads_per_node-1)) *
                         cores_per_node)//tasks_per_node-1)$
-runtime               : 01:20:00                       # time limit hr:min:sec
+runtime               : 01:40:00                       # time limit hr:min:sec
 memory_max            : 0                              # ex. 120GB | 0 grants the job access to all of the memory on each node
 mailtype              : ALL                            # mail events (BEGIN,END,FAIL,ALL)
 email                 : nourbakhsh@ucdavis.edu         # destination email address
