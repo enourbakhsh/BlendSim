@@ -84,7 +84,7 @@ constraint            : haswell # or no | NERSC Cori haswell
 cores_per_node        : 32 # NERSC Cori 32
 hyperthreads_per_node : 2  # NERSC Cori 2 meaning twice the cores can be assumed in multithreading
 tasks                 : $cellf-celli+1$                # how many tasks in total
-tasks_per_node        : 10 #4                          # (max) number of tasks per node
+tasks_per_node        : 4                              # (max) number of tasks per node
 nodes                 : $-(-tasks//tasks_per_node)$    # number of nodes used
 multithreading        : off                            # activate multithreading
 hyperthreading        : off                            # activate hyperthreading
