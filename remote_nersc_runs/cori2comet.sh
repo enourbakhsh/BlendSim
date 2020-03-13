@@ -51,7 +51,7 @@ echo -e "$body" | mailx -s "$subject" -a "$logfile" "tyson@physics.ucdavis.edu e
 # - usage [screen is optional]:
 # -------------------------------
 # screen -S myscreen (to start)
-# bash <(wget --no-cache -qO- https://github.com/cosmicshear/BlendSim/raw/master/nersc2sdsc.sh)
+# bash <(wget --no-cache -qO- https://github.com/cosmicshear/BlendSim/raw/master/remote_nersc_runs/cori2comet.sh)
 # CTRL + A + D (to detach)
 # screen -X -S myscreen quit (to kill)
 
