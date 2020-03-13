@@ -84,7 +84,7 @@ constraint            : haswell # or no | NERSC Cori haswell
 cores_per_node        : 32 # NERSC Cori 32
 hyperthreads_per_node : 2  # NERSC Cori 2 meaning twice the cores can be assumed in multithreading
 tasks                 : $cellf-celli+1$                # how many tasks in total
-tasks_per_node        : 4                              # (max) number of tasks per node
+tasks_per_node        : 2                              # (max) number of tasks per node
 nodes                 : $-(-tasks//tasks_per_node)$    # number of nodes used
 multithreading        : off                            # activate multithreading
 hyperthreading        : off                            # activate hyperthreading
@@ -92,7 +92,7 @@ cpus_per_task         : >-                             # number of cores per MPI
                         $1 + multithreading *
                         (((1+hyperthreading*(hyperthreads_per_node-1)) *
                         cores_per_node)//tasks_per_node-1)$
-runtime               : 01:40:00                       # time limit hr:min:sec
+runtime               : 03:50:00                       # time limit hr:min:sec
 memory_max            : 0                              # ex. 120GB | 0 grants the job access to all of the memory on each node
 mailtype              : ALL                            # mail events (BEGIN,END,FAIL,ALL)
 email                 : nourbakhsh@ucdavis.edu         # destination email address
