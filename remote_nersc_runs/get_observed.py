@@ -72,6 +72,19 @@ import epsnoise
 # functions
 # -------------------
 
+def usedir(mydir):
+# usage: usedir(output_fname.rsplit('/',1)[0]+'/')
+# https://stackoverflow.com/questions/12468022/python-fileexists-error-when-making-directory	
+	if not mydir.endswith('/'): mydir += '/' # important
+	try:
+		if not os.path.exists(os.path.dirname(mydir)):
+			os.makedirs(os.path.dirname(mydir)) # sometimes b/w the line above and this line another core already made this directory and it leads to [Errno 17]
+			print('-- made dir:',mydir)
+	except OSError as err:
+		pass # print('[handled error]',err)
+
+
+
 def delete(varname):
 	del globals()[varname]
 	gc.collect()
@@ -522,6 +535,7 @@ if rank<njob:
 		#print('in1d',np.in1d(cell, np.concatenate([[cell], hp.get_all_neighbours(nside, cell, nest=nest)])))
 		#output_fname = output_dir+'zsnb.'+str(cell)+'_r'+str(realization)+'.fit' 
 		output_fname = output_fname.format(**locals()) # fstring(output_fname)
+		usedir(output_fname.rsplit('/',1)[0]+'/') # create the main dir in case it does not exist
 
 		filters = [(lambda a, d: hp.ang2pix(nside, a, d, nest=nest, lonlat=True) == cell, 'ra', 'dec')]
 		native_filters = [(lambda p: np.in1d(p, np.concatenate([[cell], hp.get_all_neighbours(nside, cell, nest=nest)])), 'healpix_pixel')]
