@@ -78,13 +78,13 @@ outfname              : '{jobname}_{celli}_{cellf}_r{realization}.out' # standar
 errfname              : '{jobname}_{celli}_{cellf}_r{realization}.err' #!join [*jobname, '_r{realization}', .err]
 conda_env             : for_erfan_py3
 project               : m1727
-qos                   : 'debug' #premium # NERSC
-partition             : debug # is regular by default on NERSC
+qos                   : 'regular' #'debug' #premium # NERSC
+partition             : regular # is regular by default on NERSC
 constraint            : haswell # or no | NERSC Cori haswell
 cores_per_node        : 32 # NERSC Cori 32
 hyperthreads_per_node : 2  # NERSC Cori 2 meaning twice the cores can be assumed in multithreading
 tasks                 : $cellf-celli+1$                # how many tasks in total
-tasks_per_node        : 2                              # (max) number of tasks per node
+tasks_per_node        : 4                              # (max) number of tasks per node
 nodes                 : $-(-tasks//tasks_per_node)$    # number of nodes used
 multithreading        : off                            # activate multithreading
 hyperthreading        : off                            # activate hyperthreading
@@ -92,7 +92,7 @@ cpus_per_task         : >-                             # number of cores per MPI
                         $1 + multithreading *
                         (((1+hyperthreading*(hyperthreads_per_node-1)) *
                         cores_per_node)//tasks_per_node-1)$
-runtime               : 00:29:59                       # time limit hr:min:sec
+runtime               : 01:20:00                       # time limit hr:min:sec
 memory_max            : 0                              # ex. 120GB | 0 grants the job access to all of the memory on each node
 mailtype              : ALL                            # mail events (BEGIN,END,FAIL,ALL)
 email                 : nourbakhsh@ucdavis.edu         # destination email address
