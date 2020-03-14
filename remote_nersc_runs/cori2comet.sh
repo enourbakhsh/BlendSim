@@ -12,7 +12,7 @@ start_time="$(date -u +%s)"
 
 logfile="rsync-log-2020.txt" # will be attached to the email
 delay=3 # minutes of delay between the attempts
-source=tyson1@cori.nersc.gov:/global/cscratch1/sd/tyson1/projects/blending/buzzard_v2.0.0_lsst/zsnb/r3/zsnb.*.pickle
+source=tyson1@cori.nersc.gov:/global/cscratch1/sd/tyson1/projects/blending/buzzard_v2.0.0_lsst/zsnb/r3/zsnb.*_r3.pickle
 dest=/oasis/projects/nsf/ddp340/tyson1/buzzard_v2.0.0_lsst_r3/
 OLD_DIR=/oasis/projects/nsf/ddp340/tyson1/buzzard_v1.9.2_lsst_r3/ # old dir to be deleted if exists
 
