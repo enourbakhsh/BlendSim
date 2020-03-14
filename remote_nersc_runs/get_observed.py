@@ -226,14 +226,16 @@ def get_covmat(e1,e2,galhlr): #,already_projected=False): #slow?
 			print(f'Warning: |e| is not finite.\n|e|={e}\ne1={e1}\ne2={e2}')
 	else:
 		if any(not np.isfinite(e_abs) for e_abs in e):
-			print(f'Warning: |e| is not finite.\n|e|={e}\ne1={e1}\ne2={e2}')
+			einf = ~np.isfinite(e)
+			print(f'Warning: |e| is not finite.\n|e|={e[einf]}\ne1={e1[einf]}\ne2={e2[einf]}')
 
 	if np.isscalar(e):
 		if e>=1:
 			print(f'Warning: |e|>=1 which will lead to negative value under sqrt.\n|e|={e}\ne1={e1}\ne2={e2}')
 	else:
 		if any(e_abs>=1 for e_abs in e):
-			print(f'Warning: |e|>=1 which will lead to negative value under sqrt.\n|e|={e}\ne1={e1}\ne2={e2}')
+			ege1 = e>=1
+			print(f'Warning: |e|>=1 which will lead to negative value under sqrt.\n|e|={e[ege1]}\ne1={e1[ege1]}\ne2={e2[ege1]}')
 
 	sigma_round = galhlr/3600/np.sqrt(2.*np.log(2)) # degrees # galhlr = FLUX_RADIUS in arcsec
 
