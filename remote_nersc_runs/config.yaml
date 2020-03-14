@@ -11,7 +11,7 @@ realization         : 3
 catalog             : '{catname}_v{catversion}_{realization}'
 zregime             : zs
 celli               : 0 # None for no bounds # zero-indexed
-cellf               : 142 #0 #142 # None for no bounds # inclusive
+cellf               : 71 #0 #142 # None for no bounds # inclusive
 nest                : yes
 nside               : 8 # for healpix
 magcut_i_lsst       : 26.0 #24.0 # I went 2 mags fainter because Blendsim might displace some very faint galaxies and combined with other galaxies (collectively) they can have imag < final_cut or so
@@ -84,7 +84,7 @@ constraint            : haswell # or no | NERSC Cori haswell
 cores_per_node        : 32 # NERSC Cori 32
 hyperthreads_per_node : 2  # NERSC Cori 2 meaning twice the cores can be assumed in multithreading
 tasks                 : $cellf-celli+1$                # how many tasks in total
-tasks_per_node        : 2                              # (max) number of tasks per node
+tasks_per_node        : 1                              # (max) number of tasks per node
 nodes                 : $-(-tasks//tasks_per_node)$    # number of nodes used
 multithreading        : off                            # activate multithreading
 hyperthreading        : off                            # activate hyperthreading
