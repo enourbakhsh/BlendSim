@@ -830,11 +830,21 @@ if rank<njob:
 		# [+] PSF convolution ------------------------------------
 		# get the convolved values, no noise yet
 		
-		# first clean up some unexpected values
+		# first clean up some unexpected shear and shape values
 		nonPhys = np.sqrt(e1_true**2+e2_true**2)>=1
 		if sum(nonPhys)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(nonPhys)} bad true ellipticity, e_true>=1 \n |e|[{np.where(nonPhys)[0]}] = {np.sqrt(e1_true**2+e2_true**2)[nonPhys]} \n will take care of it...')
 		e1_true[nonPhys], e2_true[nonPhys] = 0, 0 # just a placeholder
-		nonWL = np.sqrt(e1_lensed_only**2+e2_lensed_only**2)>=1
+
+		g_complex = gamma1/(1-kappa) + 1j * gamma2/(1-kappa)
+		_mask_g = np.abs(g_complex) > 1 
+		if sum(_mask_g)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(_mask_g)} bad reduced shear, g_complex \n |g|[{np.where(_mask_g)[0]}] = {np.abs(g_complex)[_mask_g]} \n will take care of it...')
+		eps_true = e1_true + 1j* e2_true
+		eps_lensed_only = e1_lensed_only + 1j*e2_lensed_only
+		eps_lensed_only[_mask_g] = shearMasked() # ! this is not WL limit since g>1 ! it happens very very rarely; addNoise chokes with e>=1
+		e1_lensed_only, e2_lensed_only = np.real(eps_lensed_only), np.imag(eps_lensed_only)
+		del g_complex, eps_lensed_only, eps_true
+		
+		nonWL = np.sqrt(e1_lensed_only**2+e2_lensed_only**2)>=1 # check if we still have that problem
 		if sum(nonWL)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(nonWL)} bad lensed ellipticity, e_lensed_only>=1 \n |e|[{np.where(nonWL)[0]}] = {np.sqrt(e1_lensed_only**2+e2_lensed_only**2)[nonWL]} \n will take care of it...')
 		e1_lensed_only[nonWL], e2_lensed_only[nonWL] = e1_true[nonWL], e2_true[nonWL] # just a placeholder
 
@@ -851,7 +861,7 @@ if rank<njob:
 
 		Color_true_gr_des_z01 = Mag_true_g_des_z01 - Mag_true_r_des_z01
 		# g1, g2 = gamma1/(1-kappa), gamma2/(1-kappa) # assuming shear_{1,2} is not the reduced shear!
-		g_complex = gamma1/(1-kappa) + 1j * gamma2/(1-kappa)
+# 		g_complex = gamma1/(1-kappa) + 1j * gamma2/(1-kappa)
 
 		# # - - - Here I use COSMOS ellipticity distribution to assign realistic ellipticities myself
 
@@ -887,23 +897,24 @@ if rank<njob:
 
 		nu = magerr2snr(ei) # nu: significance of image i.e. S/N ratio based on imag_err
 
-		_mask_g = np.abs(g_complex) > 1 
-		if sum(_mask_g)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(_mask_g)} bad reduced shear, g_complex \n |g|[{np.where(_mask_g)[0]}] = {np.abs(g_complex)[_mask_g]} \n will take care of it...')
+# 		_mask_g = np.abs(g_complex) > 1 
+# 		if sum(_mask_g)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(_mask_g)} bad reduced shear, g_complex \n |g|[{np.where(_mask_g)[0]}] = {np.abs(g_complex)[_mask_g]} \n will take care of it...')
 
-		eps_true = e1_true + 1j* e2_true
-		eps_lensed_convolved[_mask_g] = shearMasked() # ! this is not WL limit since g>1 ! it happens very very rarely; addNoise chokes with e>=1
+# 		eps_true = e1_true + 1j* e2_true
+# 		eps_lensed_convolved[_mask_g] = shearMasked() # ! this is not WL limit since g>1 ! it happens very very rarely; addNoise chokes with e>=1
 
 		# after g>1 correction, let's see if there's still a problem?
 		_mask_e = (np.abs(eps_lensed_convolved) > maxe) | (~ np.isfinite(eps_lensed_convolved))
 		if sum(_mask_e)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(_mask_e)} bad eps_lensed_convolved \n |e|[{np.where(_mask_e)[0]}] = {np.abs(eps_lensed_convolved)[_mask_e]} \n will take care of it...')
+		e_lc_tmp = eps_lensed_convolved[_mask_e]
 		eps_lensed_convolved[_mask_e] = 0 + 1j * 0 # just a place-holder not to choke epsnoise
 
 		eps_noisy = epsnoise.addNoise(eps_lensed_convolved, nu, transform_eps=transform_eps) #, rseed=cell+1958) # rseed just for completeness # since we pass the data as a whole to epsnoise, the initial seed at the top of epsnoise is enough to generate reproducible results # I fixed this function in epsnoise to get rid of an excess number of galaxies around e~1 but Peter said you better remove them
 
 		# replace problematic shapes with (sheared+convolved)-only shapes without noise provided by buzzard to be flagged as a bad shapes later
-		eps_noisy[_mask_e] = eps_lensed_convolved[_mask_e]
+		eps_noisy[_mask_e] = e_lc_tmp
 
-		del nu, g_complex
+		del nu, e_lc_tmp
 		#gc.collect()
 
 		# e1_lensed_only = np.real(eps_lensed_only)
@@ -935,14 +946,20 @@ if rank<njob:
 
 		#shape_weight = 1. / (shape_noise**2 + de**2)
 
-		del eps_true, eps_lensed_convolved
+		del eps_lensed_convolved
 		#gc.collect()
 
 		red = red.astype(np.int8) # {1: red, 0: blue}
 		#bad_e = bad_e.astype(int)
-		bad_e = bad_e + _mask_g*2 + _mask_e*10 # {0: useful shape, 1: useless shape with e>1, 2: e<1 but sheared with g>1 not WL, 3: 1 & 2 happened at the same time, 10: sheared-only e is still illegal after all the corrections, >10: 10 combined with 1 and/or 2}
+		bad_e = bad_e + nonPhys*10 + _mask_g*100 + nonWL*1000 + _mask_e*10000
+		#     0: useful shape (noisy is the default)
+		#     1: useless shape with e>1
+		#    10: e_true>=1 unphysical 
+		#   100: e<1 but sheared with g>1 and the corresponding alternative formula, not WL regime
+		#  1000: despite using an alternative eq for g>1 still e_lensed_only>=1 not WL | replaced with true e's
+		# 10000: e_lensed_convolved is still illegal after all the fixes | noisy e's from these e_lensed_convolved values are not defined, so we replaced this kind of noisy ones with their e_lensed_convolved values to fill the place
 
-		del _mask_g, _mask_e
+		del _mask_g, _mask_e, nonPhys, nonWL 
 		#gc.collect()
 
 		shape_noise = np.std(eps_noisy[~bad_e.astype(bool)]) # exclude problematic shapes in this calculation
@@ -986,7 +1003,7 @@ if rank<njob:
 		 'u':np.float32,'g':np.float32,'r':np.float32,'i':np.float32,'z':np.float32,'y':np.float32,
 		 'eu':np.float32,'eg':np.float32,'er':np.float32,'ei':np.float32,'ez':np.float32,'ey':np.float32,
 		 'redshift_true':np.float32,'zs':np.float32,'ra':np.float64,'dec':np.float64,'galhlr_lensed_convolved':np.float32,'gamma1':np.float32,'gamma2':np.float32,'kappa':np.float32,'e1':np.float32,'e2':np.float32,
-		 'delta_e':np.float32,'delta_e1':np.float32,'delta_e2':np.float32,'e1_lensed_convolved':np.float32,'e2_lensed_convolved':np.float32,'nNaN':np.uint8,'isred':np.uint8,'bad_shape':np.uint8}
+		 'delta_e':np.float32,'delta_e1':np.float32,'delta_e2':np.float32,'e1_lensed_convolved':np.float32,'e2_lensed_convolved':np.float32,'nNaN':np.uint8,'isred':np.uint8,'bad_shape':np.uint16}
 
 		*_keys, = type_dict
 
