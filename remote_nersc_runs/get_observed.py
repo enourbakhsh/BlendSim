@@ -829,6 +829,16 @@ if rank<njob:
 
 		# [+] PSF convolution ------------------------------------
 		# get the convolved values, no noise yet
+		
+		# first clean up some unexpected values
+		nonPhys = np.sqrt(e1_true**2+e2_true**2)>=1
+		if sum(nonPhys)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(nonPhys)} bad true ellipticity, e_true>=1 \n |e|[{np.where(nonPhys)[0]}] = {np.sqrt(e1_true**2+e2_true**2)[nonPhys]} \n will take care of it...')
+		e1_true[nonPhys], e2_true[nonPhys] = 0, 0 # just a placeholder
+		nonWL = np.sqrt(e1_lensed_only**2+e2_lensed_only**2)>=1
+		if sum(nonWL)>0: print(f'Warning in rank {rank}, cell {cell}: {sum(nonWL)} bad lensed ellipticity, e_lensed_only>=1 \n |e|[{np.where(nonWL)[0]}] = {np.sqrt(e1_lensed_only**2+e2_lensed_only**2)[nonWL]} \n will take care of it...')
+		e1_lensed_only[nonWL], e2_lensed_only[nonWL] = e1_true[nonWL], e2_true[nonWL] # just a placeholder
+
+		# now convolve!
 		e1_lensed_convolved, e2_lensed_convolved, galhlr_lensed_convolved = convolve_with_PSF(e1_lensed_only,e2_lensed_only,galhlr_lensed_only,PSF_FWHM=theta_eff[refBand])  
 		del e1_lensed_only, e2_lensed_only, galhlr_lensed_only
 		# [-] PSF convolution ------------------------------------
