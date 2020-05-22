@@ -7,7 +7,7 @@ verbose             : 3 # 0: silent except for final status and warnings | 1: mi
 catname             : buzzard
 survey              : lsst
 catversion          : 2.0.0
-realization         : 3
+realization         : 4
 catalog             : '{catname}_v{catversion}_{realization}'
 zregime             : zs
 celli               : 72 # None for no bounds # zero-indexed
