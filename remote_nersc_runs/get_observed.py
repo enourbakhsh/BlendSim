@@ -374,6 +374,7 @@ if log_memory: memory.log('A1', get_linenumber())
 ## load 'buzzard' catalog
 # realizations = ['buzzard_v1.6', 'buzzard_v1.6_1', 'buzzard_v1.6_2', 'buzzard_v1.6_3', 'buzzard_v1.6_5', 'buzzard_v1.6_21']
 # catalogs = ['buzzard_v1.9.2', 'buzzard_v1.9.2_1', 'buzzard_v1.9.2_2', 'buzzard_v1.9.2_3'] # and more - 18 realizations
+GCRCatalogs.set_root_dir_by_site(gcr_sitename)
 gcr = GCRCatalogs.load_catalog(catalog)
 gcr.healpix_pixels = cell_ids # !NEST ordering!
 gcr.check_healpix_pixels()
