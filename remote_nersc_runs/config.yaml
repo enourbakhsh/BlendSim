@@ -4,6 +4,7 @@
 
 parallel            : on
 verbose             : 3 # 0: silent except for final status and warnings | 1: minimal progress info | 2: all steps (only with one core as a representative) | 3: all steps (from all cores) -- option 2 does not work yet (TODO)
+gcr_sitename        : nersc
 catname             : buzzard
 survey              : lsst
 catversion          : 2.0.0
