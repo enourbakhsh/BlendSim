@@ -11,8 +11,8 @@ catversion          : 2.0.0
 realization         : 4 
 catalog             : '{catname}_v{catversion}_{realization}'
 zregime             : zs
-celli               : 72 # None for no bounds # zero-indexed
-cellf               : 142 #0 #142 # None for no bounds # inclusive
+celli               : 0 #72 # None for no bounds # zero-indexed
+cellf               : 71 #142 #0 #142 # None for no bounds # inclusive
 nest                : yes
 nside               : 8 # for healpix
 magcut_i_lsst       : 26.0 #24.0 # I went 2 mags fainter because Blendsim might displace some very faint galaxies and combined with other galaxies (collectively) they can have imag < final_cut or so
@@ -93,7 +93,7 @@ cpus_per_task         : >-                             # number of cores per MPI
                         $1 + multithreading *
                         (((1+hyperthreading*(hyperthreads_per_node-1)) *
                         cores_per_node)//tasks_per_node-1)$
-runtime               : 01:30:00                       # time limit hr:min:sec
+runtime               : 01:35:00                       # time limit hr:min:sec
 memory_max            : 0                              # ex. 120GB | 0 grants the job access to all of the memory on each node
 mailtype              : ALL                            # mail events (BEGIN,END,FAIL,ALL)
 email                 : nourbakhsh@ucdavis.edu         # destination email address
