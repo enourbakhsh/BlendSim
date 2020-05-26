@@ -362,9 +362,9 @@ cell_ids_in_stripe.extend( radeclim2cell([rai,raf], [deci,deci+bezel],num_points
 cell_ids_in_stripe.extend( radeclim2cell([raf-bezel,raf], [deci,decf],num_points=numrand,pixinfo=hpinfo) )
 cell_ids_in_stripe.extend( radeclim2cell([rai,raf], [decf-bezel,decf],num_points=numrand,pixinfo=hpinfo) )
 
-blacklist = list(set(cell_ids_in_stripe)) # avoid cells that live around the edges
+blocklist = list(set(cell_ids_in_stripe)) # avoid cells that live around the edges
 
-cell_ids = [aa for aa in cell_ids_in_a_quarter if aa not in blacklist]
+cell_ids = [aa for aa in cell_ids_in_a_quarter if aa not in blocklist]
 cell_ids.sort() # to have identical sorted lists for all cores
 
 cell_ids = cell_ids[celli:cellf] #if cellf is None else cell_ids[celli:cellf_+1] # since it should include celli and cellf as well
