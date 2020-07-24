@@ -100,8 +100,8 @@ def radec2pix(ra,dec,pixinfo=None):
 	pixnum = hp.ang2pix(pixinfo['nside'],ra,dec,nest=pixinfo['nest'],lonlat=True) # longitude (~ra) and latitude (~dec) in degrees
 	return pixnum.tolist()
 
-def radeclim2cell(ra_lim, dec_lim,num_points=5000,pixinfo=None):
-	rand_ra, rand_dec = fp.uniform_rect(ra_lim, dec_lim, num_points=num_points)
+def radeclim2cell(ra_lim, dec_lim,num_points=5000,pixinfo=None,seed=None):
+	rand_ra, rand_dec = fp.uniform_rect(ra_lim, dec_lim, num_points=num_points,seed=seed)
 	cell_ids_touched = radec2pix(rand_ra,rand_dec,pixinfo=pixinfo)
 	return list(set(cell_ids_touched)) # deletes duplicates; won't preserve the order
 
@@ -354,13 +354,13 @@ t0=time.process_time()
 hpinfo = {'nside': nside, 'nest': nest}
 
 # generate randoms such that at least one random position falls into each healpix cell for the iven resolution nside = 8 -> so 1000 is fine
-cell_ids_in_a_quarter = radeclim2cell([rai,raf], [deci,decf],num_points=numrand,pixinfo=hpinfo) # Buzzard galaxies are all in a quarter of sky
+cell_ids_in_a_quarter = radeclim2cell([rai,raf], [deci,decf],num_points=numrand,pixinfo=hpinfo,seed=RandomSeed) # Buzzard galaxies are all in a quarter of the sky
 
 # find the edge cells to remove them later
-cell_ids_in_stripe = radeclim2cell([rai,rai+bezel], [deci,decf],num_points=numrand,pixinfo=hpinfo) 
-cell_ids_in_stripe.extend( radeclim2cell([rai,raf], [deci,deci+bezel],num_points=numrand,pixinfo=hpinfo) )
-cell_ids_in_stripe.extend( radeclim2cell([raf-bezel,raf], [deci,decf],num_points=numrand,pixinfo=hpinfo) )
-cell_ids_in_stripe.extend( radeclim2cell([rai,raf], [decf-bezel,decf],num_points=numrand,pixinfo=hpinfo) )
+cell_ids_in_stripe = radeclim2cell([rai,rai+bezel], [deci,decf],num_points=numrand,pixinfo=hpinfo,seed=RandomSeed) 
+cell_ids_in_stripe.extend( radeclim2cell([rai,raf], [deci,deci+bezel],num_points=numrand,pixinfo=hpinfo,seed=RandomSeed) )
+cell_ids_in_stripe.extend( radeclim2cell([raf-bezel,raf], [deci,decf],num_points=numrand,pixinfo=hpinfo,seed=RandomSeed) )
+cell_ids_in_stripe.extend( radeclim2cell([rai,raf], [decf-bezel,decf],num_points=numrand,pixinfo=hpinfo,seed=RandomSeed) )
 
 blocklist = list(set(cell_ids_in_stripe)) # avoid cells that live around the edges
 
