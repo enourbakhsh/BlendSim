@@ -57,7 +57,7 @@ airMass          : 1.2
 sigmaSys         : 0.005
 extendedSource   : on # assumes extended sources - generates appropriate theta_eff for galaxies
 HLR_gal_median   : 0.27 # not convolved! # [needed if extendedSource is on] median of galaxy half light radii in arcsec - normally for refBand but buzz_ver>=1.9.2 resamples from HST F125
-RandomSeed       : 1915
+RandomSeed       : 1915 # we also use this random seed for finding the edge cells
 nVisYr           : {'LSST_u':5.6,   'LSST_g':8.0,   'LSST_r':18.4,  'LSST_i':18.4,  'LSST_z':16.0,  'LSST_y':16.0}
 msky             : {'LSST_u':22.99, 'LSST_g':22.26, 'LSST_r':21.20, 'LSST_i':20.48, 'LSST_z':19.60, 'LSST_y':18.61} # sky brightness (mag/arcsec^2)
 theta_eff_zenith : {'LSST_u':0.92,  'LSST_g':0.87,  'LSST_r':0.83,  'LSST_i':0.80,  'LSST_z':0.78,  'LSST_y':0.76}  # seeing (FWHM in arcsec) at zenith for point sources
