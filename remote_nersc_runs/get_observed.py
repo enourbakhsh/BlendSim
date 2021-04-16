@@ -591,7 +591,7 @@ if rank<njob:
 		# del e1_lensed_only, e2_lensed_only
 		# # [-] PSF convolution -------------------------------------
 
-		# convolved galaxy FWHM is needed to introduce noise to the magnitudes
+		# non-convolved galaxy FWHM is needed to introduce noise to the magnitudes (the code internally combines this with the FWHM of our PSF)
 		FWHM_gal = 2*galhlr_lensed_only # assumes gaussian galaxies | needed later not right here
 		# FWHM_gal should not be convolved!!! based on the way getObs(...) function is written
 
